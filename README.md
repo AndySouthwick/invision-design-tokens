@@ -5,14 +5,18 @@ for use with invision DSM
 
 run `npm i invision-design-tokens` in your command line
 
-### install Concurrently
+### ANGULAR ONLY install Concurrently
 
  run `npm i concurrently` in your command line
 
 for angular change your start script in your package.json to look like this
 
-`"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/index.js\"",`
+`"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/index.js\""`
 
+### FOR REACT
+change your start script in your package.json to look like this
+
+   `"start": "react-scripts start | node node_modules/invision-design-tokens/index.js"`
 
 ### create config file
 
