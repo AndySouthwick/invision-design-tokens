@@ -1,0 +1,33 @@
+{
+  "name": "invision-design-tokens",
+  "version": "1.0.0",
+  "description": "add your url endpoints from invision and the script will create your stylesheets locally",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndySouthwick/invision-design-tokens.git"
+  },
+  "keywords": [
+    "invision",
+    "design",
+    "tokens"
+  ],
+  "author": "Andrew Southwick <asouthwick01@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndySouthwick/invision-design-tokens/issues"
+  },
+  "homepage": "https://github.com/AndySouthwick/invision-design-tokens#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
