@@ -22,11 +22,11 @@ this is where we will be able to tell invision-design-tokens what url end point 
 ### add your url endpoints that DSM has provided into the export
 
 `module.exports = [
-  {"url": "https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/_style-params.scss?key=Sye_KlJfCf",
+  {"url": "<YOUR INVISION DSM SASS URL>",
     "location": "node_modules/invision-design-tokens/style-params.scss"},
-  {"url": "https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/style-params.less?key=Sye_KlJfCf",
+  {"url": "<YOUR INVISION DSM LESS URL>",
     "location": "node_modules/invision-design-tokens/style-params.less"},
-  {"url": "https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/style-params.styl?key=Sye_KlJfCf",
+  {"url": "<YOUR INVISION DSM STYLUS URL>",
     "location": "node_modules/invision-design-tokens/style-params.styl"},
 ]`
 
@@ -35,11 +35,11 @@ Thats it, any time you want the latest styles from your invision design system m
 
 you can now use your tokens in your chosen preprocessor style
 
-scss: `@import invision-design-tokens/style-params.less`
+LESS: `@import invision-design-tokens/style-params.less`
 
-less: `@import invision-design-tokens/style-params.scss`
+SASS: `@import invision-design-tokens/style-params.scss`
 
-stylus: `@import invision-design-tokens/style-params.styl`
+STYLUS: `@import invision-design-tokens/style-params.styl`
 
 
 

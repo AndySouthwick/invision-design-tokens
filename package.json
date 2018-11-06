@@ -1,7 +1,7 @@
 {
   "name": "invision-design-tokens",
   "version": "1.0.0",
-  "description": "add your url endpoints from invision and the script will create your stylesheets locally",
+  "description": "add your url endpoints from invision DSM and the script will create your stylesheets locally",
   "main": "index.js",
   "scripts": {
     "build": "babel src -d lib"
