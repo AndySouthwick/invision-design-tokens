@@ -19,7 +19,7 @@ for angular change your start script in your package.json to look like this
 at your project root directory create `designtokens.config.js`
 this is where we will be able to tell invision-design-tokens what url end point to look at to get the dsm styles from
 
-### add your url endpoints that DSM has provided into the export
+### add your url endpoints that DSM has provided into the config file
 
 `module.exports = [
   {"url": "<YOUR INVISION DSM SASS URL>",
