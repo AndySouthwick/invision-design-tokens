@@ -13,8 +13,7 @@ for angular change your start script in your package.json to look like this
 
 `"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/index.js\""`
 
-### For AngularJS there might not be a start script so you can just run the script by itself to do the pull each
-time you need to update the tokens locally.
+### For AngularJS there might not be a start script so you can just run the script by itself to do the pull each time you need to update the tokens locally.
 
 run in your command line
 
