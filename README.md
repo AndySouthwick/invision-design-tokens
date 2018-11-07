@@ -35,7 +35,7 @@ this is where we will be able to tell invision-design-tokens what url end point 
 ]`
 
 
-Thats it, any time you want the latest styles from your invision design system manager just run the `npm start`
+Thats it, any time you want the latest styles from your invision design system manager just run `npm start`
 
 you can now use your tokens in your chosen preprocessor style
 
