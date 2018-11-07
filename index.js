@@ -2,8 +2,7 @@
 // import fs from 'fs'
 const fs = require('fs')
 const rp = require('request-promise')
-const invisionData = require('../../designtokens.config')
-// import {invisionData} from '../designtokens.config'
+const invisionData = require('designtokens.config.example.js')
 renderStyles = async (dataArray) => {
   await dataArray.map(async data => {
     const e = await rp(data.url)
