@@ -31,17 +31,17 @@ this is where we will be able to tell invision-design-tokens what url end point 
 
 ### add your url endpoints that DSM has provided into the config file
 
-`module.exports = [
-{"url": "<YOUR INVISION ICON DOWLOAD URL>",
-"location": "<WHERE YOU WANT YOUR ZIP FILE DOWNLOADED>",
-"unzippedlocation": "<WHEREVER YOU PREFER>"}
-  {"url": "<YOUR INVISION DSM SASS URL>",
+    `module.exports = [
+    {"url": "<YOUR INVISION ICON DOWLOAD URL>",
+    "location": "<WHERE YOU WANT YOUR ZIP FILE DOWNLOADED>",
+    "unzippedlocation": "<WHEREVER YOU PREFER>"}
+     {"url": "<YOUR INVISION DSM SASS URL>",
     "location": "node_modules/invision-design-tokens/style-params.scss"},
-  {"url": "<YOUR INVISION DSM LESS URL>",
+      {"url": "<YOUR INVISION DSM LESS URL>",
     "location": "node_modules/invision-design-tokens/style-params.less"},
-  {"url": "<YOUR INVISION DSM STYLUS URL>",
+     {"url": "<YOUR INVISION DSM STYLUS URL>",
     "location": "node_modules/invision-design-tokens/style-params.styl"},
-]`
+    ]`
 
 
 Thats it, any time you want the latest styles from your invision design system manager just run `npm start`
