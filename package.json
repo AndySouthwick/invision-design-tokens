@@ -1,6 +1,6 @@
 {
   "name": "invision-dsm-style-renderer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "add your url endpoints from invision DSM and the script will create your stylesheets locally",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,10 @@
     "@babel/preset-env": "^7.1.0"
   },
   "dependencies": {
+    "adm-zip": "^0.4.11",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "unzip": "^0.1.11",
+    "yauzl": "^2.10.0"
   }
 }

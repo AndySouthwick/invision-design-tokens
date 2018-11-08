@@ -1,2 +1,5 @@
 .idea
 /node_modules
+/icons
+designtokens.config.js
+params-styles.*
