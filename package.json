@@ -29,8 +29,6 @@
   "dependencies": {
     "adm-zip": "^0.4.11",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "unzip": "^0.1.11",
-    "yauzl": "^2.10.0"
+    "request-promise": "^4.2.2"
   }
 }
