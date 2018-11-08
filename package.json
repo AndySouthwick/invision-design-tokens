@@ -1,6 +1,6 @@
 {
   "name": "invision-dsm-style-renderer",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "description": "add your url endpoints from invision DSM and the script will create your stylesheets locally",
   "main": "index.js",
   "scripts": {
