@@ -10,9 +10,13 @@ const Zip = require('adm-zip');
 renderStyles = async (dataArray) => {
   try{
     await dataArray.map(async data => {
-      if(data.location === 'node_modules/invision-design-tokens/icons.zip'){
-        await request(data.url).pipe(fs.createWriteStream("icons.zip")).on('close', function () {
-          renderIcons()
+      if(data.location === 'icons.zip'){
+        await request(data.url).pipe(fs.createWriteStream(data.location)).on('close', async () =>  {
+          let zip = await new Zip(data.location);
+          // get all entries and iterate them
+          zip.getEntries().forEach(function() {
+            zip.extractAllTo(data.unzippedlocation , true)
+          })
         });
       }
       let e = await rp(data.url)
@@ -29,20 +33,5 @@ renderStyles = async (dataArray) => {
 }
 
 
-renderIcons = async () => {
-
-  try{
-    let zip = new Zip("icons.zip");
-    // get all entries and iterate them
-
-    zip.getEntries().forEach(function() {
-      zip.extractAllTo("node_modules/invision-design-tokens/icons", true)
-    })
-  }catch(e){
-    console.log('the zip file came back bad please run again', e)
-  }
-
-
-}
 
 renderStyles(invisionData)
