@@ -2,9 +2,10 @@
   "name": "invision-design-tokens",
   "version": "1.1.2",
   "description": "add your url endpoints from invision DSM and the script will create your stylesheets locally",
-  "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "config": "node create-config.js",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   ],
   "author": "Andrew Southwick <asouthwick01@gmail.com>",
   "license": "ISC",
+  "bin": {
+    "dsm-config": "./create-config.js"
+  },
   "bugs": {
     "url": "https://github.com/AndySouthwick/invision-design-tokens/issues"
   },
@@ -24,7 +28,8 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0"
+    "@babel/preset-env": "^7.1.0",
+    "log": "^1.4.0"
   },
   "dependencies": {
     "adm-zip": "^0.4.11",
