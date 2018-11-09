@@ -20,7 +20,7 @@ appendToConfigObject = () => {
       let data1 = {"url": args[1]}
       let combinedArgs1 = Object.assign(data1, appendData)
       console.log(combinedArgs1)
-      createWriteToConfig(combinedArgs1)
+      createWriteToConfig(JSON.stringify(combinedArgs1))
       break;
     case 'location':
       let data2 = {"location": args[1]}
