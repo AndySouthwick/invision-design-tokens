@@ -34,7 +34,7 @@ this is where we will be able to tell invision-design-tokens what url end point 
     `module.exports = [
     {"url": "<YOUR INVISION ICON DOWLOAD URL>",
     "location": "<WHERE YOU WANT YOUR ZIP FILE DOWNLOADED>",
-    "unzippedlocation": "<WHEREVER YOU PREFER>"}
+    "icons": true}
      {"url": "<YOUR INVISION DSM SASS URL>",
     "location": "node_modules/invision-design-tokens/style-params.scss"},
       {"url": "<YOUR INVISION DSM LESS URL>",

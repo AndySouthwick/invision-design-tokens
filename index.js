@@ -10,12 +10,12 @@ const Zip = require('adm-zip');
 renderStyles = async (dataArray) => {
   try{
     await dataArray.map(async data => {
-      if(data.location === 'icons.zip'){
-        await request(data.url).pipe(fs.createWriteStream(data.location)).on('close', async () =>  {
-          let zip = await new Zip(data.location);
+      if(data.icons){
+        await request(data.url).pipe(fs.createWriteStream('icons.zip')).on('close', async () =>  {
+          let zip = await new Zip('icons.zip');
           // get all entries and iterate them
           zip.getEntries().forEach(function() {
-            zip.extractAllTo(data.unzippedlocation , true)
+            zip.extractAllTo(data.location , true)
           })
         });
       }
