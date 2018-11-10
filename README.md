@@ -1,57 +1,33 @@
 # Invision Design Tokens
 for use with invision DSM
 
-## Install Instructions
+## INSTALL INSTRUCTIONS
 
 run `npm i invision-design-tokens` in your command line
 
-### ANGULAR ONLY install Concurrently
+### CREATE YOUR CONFIG INFORMATION
 
- run `npm i concurrently` in your command line
+run `dsm-config url 'YOUR DSM URL FOR WHATEVER PREPROCESSOR YOU WANT TO USE'` in your command line
 
-for angular change your start script in your package.json to look like this
+example `dsm-config url 'https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/_style-params.scss?key=Sye_KlJfCf'`
 
-`"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/dsm.js\""`
+run `dsm-config location 'WHAT DIRECTORY YO UWANT YOU PREPROCESSED STYLES DOWNLOADED TO'` in your command line
 
-### FOR REACT
-change your start script in your package.json to look like this
+example `dsm-config location 'node_modules/invision-design-tokens/style-parmas.scss'`
 
-   `"start": "react-scripts start | node node_modules/invision-design-tokens/dsm.js"`
+run `dsm-config icon 'YOUR DSM URL TO YOUR ICON.ZIP'` in your command line
 
-### create config file
+example `dsm-config url 'https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/icons.zip?key=Sye_KlJfCf'`
 
-at your project root directory create `designtokens.config.js`
-this is where we will be able to tell invision-design-tokens what url end point to look at to get the dsm styles from
+run `dsm-config iconDir 'WHAT DIRECTORY YOU WANT YOUR ICONS TO BE IN'` in your command line
 
-### add your url endpoints that DSM has provided into the config file
+example `dsm-config iconDir 'src/assets/images/icons'`
 
-The objects in the array is constructed with 2 key value pairs `url` is the dsm provided url to your tokens. the `location` is
-whatever directory you want the file to be added to. I like to just leave mine in the node_module. There is a third key value pair called
-icons which needs to be set to true so that the icons object runs in the right area of the function.
+### PULL THE SCRIPTS
 
+run `dsm-pull`
 
-    `module.exports = [
-    {"url": "<YOUR INVISION ICON DOWLOAD URL>",
-    "location": "<WHERE YOU WANT YOUR ZIP FILE DOWNLOADED>",
-    "icons": true}
-     {"url": "<YOUR INVISION DSM SASS URL>",
-    "location": "node_modules/invision-design-tokens/style-params.scss"},
-      {"url": "<YOUR INVISION DSM LESS URL>",
-    "location": "node_modules/invision-design-tokens/style-params.less"},
-     {"url": "<YOUR INVISION DSM STYLUS URL>",
-    "location": "node_modules/invision-design-tokens/style-params.styl"},
-    ]`
-
-
-Thats it, any time you want the latest styles from your invision design system manager just run `npm start`
-
-### For AngularJS there might not be a start script so you can just run the script by itself to do the pull each time you need to update the tokens locally.
-
-run in your command line
-
-`node node_modules/invision-design-tokens/dsm.js`
-
-you can now use your tokens in your chosen preprocessor style
+### IMPORT YOUR PREPROCESSED STYLES    
 
 LESS: `@import invision-design-tokens/style-params.less`
 
@@ -60,4 +36,11 @@ SASS: `@import invision-design-tokens/style-params.scss`
 STYLUS: `@import invision-design-tokens/style-params.styl`
 
 
+#### Thats it! you should be up and running with everything 
+
+anytime you need to update your dsm files locally just run dsm-pull
+
+if for whatever reason you need to update your config just run the `dsm-config` command with the the information you want to change
+
+To see what is in your config file run `dsm-viewCon`
 
