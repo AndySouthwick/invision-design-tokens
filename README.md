@@ -11,12 +11,12 @@ run `npm i invision-design-tokens` in your command line
 
 for angular change your start script in your package.json to look like this
 
-`"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/index.js\""`
+`"start": "concurrently \"ng serve\" \"node node_modules/invision-design-tokens/dsm.js\""`
 
 ### FOR REACT
 change your start script in your package.json to look like this
 
-   `"start": "react-scripts start | node node_modules/invision-design-tokens/index.js"`
+   `"start": "react-scripts start | node node_modules/invision-design-tokens/dsm.js"`
 
 ### create config file
 
@@ -49,7 +49,7 @@ Thats it, any time you want the latest styles from your invision design system m
 
 run in your command line
 
-`node node_modules/invision-design-tokens/index.js`
+`node node_modules/invision-design-tokens/dsm.js`
 
 you can now use your tokens in your chosen preprocessor style
 

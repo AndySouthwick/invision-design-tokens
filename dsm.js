@@ -1,21 +1,21 @@
+#!/usr/bin/env node
 const fs = require('fs')
 const rp = require('request-promise')
 const request = require('request')
 const invisionData = require('./designtokens.config.js')
 const Zip = require('adm-zip');
 
-
-
+console.log('your assets have been pulled')
 
 renderStyles = async (dataArray) => {
   try{
     await dataArray.map(async data => {
-      if(data.location === 'icons.zip'){
-        await request(data.url).pipe(fs.createWriteStream(data.location)).on('close', async () =>  {
-          let zip = await new Zip(data.location);
+      if(data.icons){
+        await request(data.icons).pipe(fs.createWriteStream('icons.zip')).on('close', async () =>  {
+          let zip = await new Zip('icons.zip');
           // get all entries and iterate them
           zip.getEntries().forEach(function() {
-            zip.extractAllTo(data.unzippedlocation , true)
+            zip.extractAllTo(data.iconDir , true)
           })
         });
       }
