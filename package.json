@@ -20,7 +20,8 @@
   "license": "ISC",
   "bin": {
     "dsm-config": "./create-config.js",
-    "dsm-pull": "./dsm.js"
+    "dsm-pull": "./dsm.js",
+    "dsm-viewcon": "./viewConfig.js"
   },
   "bugs": {
     "url": "https://github.com/AndySouthwick/invision-design-tokens/issues"
@@ -34,6 +35,7 @@
   },
   "dependencies": {
     "adm-zip": "^0.4.11",
+    "link": "^0.1.5",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   }
