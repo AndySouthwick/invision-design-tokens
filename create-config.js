@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+
+const log = require('log')
 const fs = require('fs')
 const[,, ...args] = process.argv
 // section
@@ -17,14 +19,12 @@ const createWriteToConfig = (data) => {
 // section
 
 appendToConfigObject = () => {
-  console.log('ran append function')
   const invisionData = require('./designtokens.config')
   let appendData = invisionData[0]
   switch(args[0]){
     case 'url':
       let data1 = {"url": args[1]}
       let combinedArgs1 = Object.assign(data1, appendData)
-      console.log(combinedArgs1)
       if(appendData.url) {
         checkForDataRewrite('url')
       }else{
@@ -62,7 +62,7 @@ appendToConfigObject = () => {
       }
       break;
     default:
-      return
+      console.log('please use dsm-config icons, iconDir, location, or url to update')
   }
 }
 // section

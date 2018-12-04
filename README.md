@@ -5,21 +5,32 @@ for use with invision DSM
 
 run `npm i invision-design-tokens` in your command line
 
-### CREATE YOUR CONFIG INFORMATION
+###LINK THE CLI 
 
-run `dsm-config url 'YOUR DSM URL FOR WHATEVER PREPROCESSOR YOU WANT TO USE'` in your command line
+run  `npm link invision-design-tokens`
+
+## CREATE CONFIG FILE THROUGH THE CLI
+
+### ADD YOUR INVISION DSM TOKEN URL
+
+run `dsm-config url '<YOUR PREPROCESSOR LINK FOUND ON DSM>'` in your command line
 
 example `dsm-config url 'https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/_style-params.scss?key=Sye_KlJfCf'`
 
-run `dsm-config location 'WHAT DIRECTORY YO UWANT YOU PREPROCESSED STYLES DOWNLOADED TO'` in your command line
+### DEFINE WHAT DIRECTORY YOU WANT IT DOWNLOADED TO
+run `dsm-config location '<WHAT DIRECTORY YO UWANT YOU PREPROCESSED STYLES DOWNLOADED TO>'` in your command line
 
-example `dsm-config location 'node_modules/invision-design-tokens/style-parmas.scss'`
+example `dsm-config location 'node_modules/invision-design-tokens/style-params.scss'`
 
-run `dsm-config icon 'YOUR DSM URL TO YOUR ICON.ZIP'` in your command line
+### ADD YOUR INVISION DSM ICON URL
 
-example `dsm-config url 'https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/icons.zip?key=Sye_KlJfCf'`
+run `dsm-config icons '<YOUR DSM URL TO YOUR ICON.ZIP>'` in your command line
 
-run `dsm-config iconDir 'WHAT DIRECTORY YOU WANT YOUR ICONS TO BE IN'` in your command line
+example `dsm-config icons 'https://projects.invisionapp.com/dsm-export/usana-dsm/usana-design-system/icons.zip?key=Sye_KlJfCf'`
+
+### DEFINE WHAT DIRECTORY YOU WANT IT DOWNLOADED T
+
+run `dsm-config iconDir '<WHAT DIRECTORY YOU WANT YOUR ICONS TO BE IN>'` in your command line
 
 example `dsm-config iconDir 'src/assets/images/icons'`
 
