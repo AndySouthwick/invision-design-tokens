@@ -30,7 +30,7 @@
   "devDependencies": {},
   "dependencies": {
     "adm-zip": "^0.4.13",
-    "link": "^0.1.5",
+    "lank": "^0.2.1",
     "log": "^3.2.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"

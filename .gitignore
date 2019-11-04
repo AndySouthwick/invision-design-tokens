@@ -1,7 +1,9 @@
 .idea
 /node_modules
 /icons
+package-lock.json
 designtokens.config.js
 params-styles.*
 style-params.*
 icons.zip
+yarn.lock
