@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const fs = require('fs')
-if (fs.existsSync('node_modules/invision-design-tokens/designtokens.config.js')) {
+if (fs.existsSync('./invision-design-tokens/designtokens.config.js')) {
   const invisionData = require('./designtokens.config')
   console.log(invisionData)
 }else{

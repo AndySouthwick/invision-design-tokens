@@ -20,7 +20,7 @@ example `dsm-config url 'https://projects.invisionapp.com/dsm-export/usana-dsm/u
 ### DEFINE WHAT DIRECTORY YOU WANT IT DOWNLOADED TO
 run `dsm-config location '<WHAT DIRECTORY YO UWANT YOU PREPROCESSED STYLES DOWNLOADED TO>'` in your command line
 
-example `dsm-config location 'node_modules/invision-design-tokens/style-params.scss'`
+example `dsm-config location './invision-design-tokens/style-params.scss'`
 
 ### ADD YOUR INVISION DSM ICON URL
 
