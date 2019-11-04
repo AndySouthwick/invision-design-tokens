@@ -29,10 +29,10 @@
   "homepage": "https://github.com/AndySouthwick/invision-design-tokens#readme",
   "devDependencies": {},
   "dependencies": {
-    "adm-zip": "^0.4.11",
+    "adm-zip": "^0.4.13",
     "link": "^0.1.5",
     "log": "^3.2.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.5"
   }
 }

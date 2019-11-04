@@ -7,9 +7,9 @@ const[,, ...args] = process.argv
 const createWriteToConfig = (data) => {
     console.log('from createWriteToConfig', data)
     let writeDataExports = `module.exports = [${data}]`
-    fs.writeFile('node_modules/invision-design-tokens/designtokens.config.js', writeDataExports, (err) => {
+    fs.writeFile('./invision-design-tokens/designtokens.config.js', writeDataExports, (err) => {
       if(err) log(err);
-      if (!fs.existsSync('node_modules/invision-design-tokens/designtokens.config.js')) {
+      if (!fs.existsSync('./invision-design-tokens/designtokens.config.js')) {
         console.log("successfully created config file")
       }else{
         console.log("successfully updated config file")
@@ -73,7 +73,7 @@ checkForDataRewrite = (key) => {
   if(key === 'url'){
     let updatedData = {"url": args[1], "location": appendData.location}
     let writeDataExports = `module.exports = [${JSON.stringify(updatedData)}]`
-    fs.writeFile('node_modules/invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
+    fs.writeFile('./invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
       if(err) log(err);
       console.log("successfully updated config file")
     })
@@ -81,7 +81,7 @@ checkForDataRewrite = (key) => {
   if(key === 'location'){
     let updatedData = {"location": args[1], "url": appendData.url}
     let writeDataExports = `module.exports = [${JSON.stringify(updatedData)}]`
-    fs.writeFile('node_modules/invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
+    fs.writeFile('./invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
       if(err) log(err);
       console.log("successfully updated config file")
     })
@@ -89,7 +89,7 @@ checkForDataRewrite = (key) => {
   if(key === 'iconDir'){
     let updatedData = {"location": args[1], "url": appendData.url}
     let writeDataExports = `module.exports = [${JSON.stringify(updatedData)}]`
-    fs.writeFile('node_modules/invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
+    fs.writeFile('./invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
       if(err) log(err);
       console.log("successfully updated config file")
     })
@@ -97,7 +97,7 @@ checkForDataRewrite = (key) => {
   if(key === 'icons'){
     let updatedData = {"location": args[1], "url": appendData.url}
     let writeDataExports = `module.exports = [${JSON.stringify(updatedData)}]`
-    fs.writeFile('node_modules/invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
+    fs.writeFile('./invision-design-tokens/designtokens.config.js',  writeDataExports, (err) => {
       if(err) log(err);
       console.log("successfully updated config file")
     })
@@ -106,7 +106,7 @@ checkForDataRewrite = (key) => {
 
 // section
 
-  if (fs.existsSync('node_modules/invision-design-tokens/designtokens.config.js')) {
+  if (fs.existsSync('./invision-design-tokens/designtokens.config.js')) {
     appendToConfigObject()
   } else {
     switch (args[0]) {
